@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="css/signup.css">
+<link rel="stylesheet"  href="css/nav.css">
+
+<style>
+</style>
+</head>
+<body>
+
+<div class="topnav sticky" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+  <div class="topnav-right">
+    
+     <a href="#calander">Calander</a>
+  <a href="#contact">Active jobs</a> 
+
+
+<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >login</a>
+<a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Signup</a>
+
+  <a class="topnav-right" href="#contact">logout</a>
+
+
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+
+    <div class="container" >
+      <span class="psw"> <a href="#"> Forgot password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+<div id="id02" class="modal">
+
+  
+  <form class="modal-content animate" action="/action.php" method="post">
+        <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+
+      <label for="uname"><b>Username</b></label>
+
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label id="errormsg" style="color:red; font-size:15px;">Not Available</label>
+      <br>
+       <br>
+
+      <label for="psw"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" required>
+
+       <label for="psw"><b>Email</b></label>
+      <input type="text" placeholder="Enter email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+
+      <label for="psw"><b>Confirm Password</b></label>
+      <input type="password" placeholder="Reneter Password" name="password" required>
+
+
+      <label for="uname"><b>Contact Number</b></label>
+      <input type="text" placeholder="Enter Contact Number" name="phno" required>
+
+      <label for="uname"><b>GST Details</b></label>
+      <input type="text" placeholder="Enter GST Number (Optional)" name="uname">
+
+      <label for="uname"><b>Address</b></label>
+      <input type="text" placeholder="Address" name="Address" required>
+        
+      <button type="submit">Signup</button>
+     
+    </div>
+
+    <div class="container">
+      
+    </div>
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>
